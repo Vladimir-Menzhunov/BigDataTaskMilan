@@ -6,11 +6,7 @@ import org.apache.spark.sql.functions._
 object Example extends App {
   Logger.getLogger("org").setLevel(Level.ERROR)
 
-  val sparkConf = new SparkConf()
-    .setAppName("sparkConf")
-    .setMaster("local[*]")
-  val sc = new SparkContext(sparkConf)
-
+ 
   implicit val spark: SparkSession = SparkSession.builder()
     .appName("example")
     .master("local[*]")

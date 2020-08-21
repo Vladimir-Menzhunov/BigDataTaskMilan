@@ -5,7 +5,7 @@ object Parameters {
   val pathTelec = "./datasource/telec/*"
 
   def incSchema(structType: StructType, nameSchema: String, delimited: String)(implicit spark: SparkSession): DataFrame =
-    spark.read.format("jdbc")
+    spark.read
       .options(
         Map(
           "delimiter" -> delimited,
