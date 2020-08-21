@@ -40,8 +40,8 @@ object Example extends App {
     ).agg(
     sum(col("SUM_ACTIVITY_USER")).as("ALL_ACTIVITY"),
     min(col("SUM_ACTIVITY_USER")).as("MIN_ACTIVITY"),
-    max(col("SUM_ACTIVITY_USER").as("MAX_ACTIVITY")),
-    avg(col("SUM_ACTIVITY_USER").as("AVG_ACTIVITY"))
+    max(col("SUM_ACTIVITY_USER")).as("MAX_ACTIVITY"),
+    avg(col("SUM_ACTIVITY_USER")).as("AVG_ACTIVITY")
   ).show()
 
 }
